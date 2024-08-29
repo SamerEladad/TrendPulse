@@ -1,55 +1,82 @@
 # TrendPulse
 
-TrendPulse is an AI-powered chatbot designed to provide insights about current and upcoming product trends for dropshipping. Leveraging the power of web scraping and large language models (LLMs), TrendPulse helps users identify potential winning products to sell before they become saturated in the market.
+Welcome to TrendPulse, a deep learning and product recommendation project designed as a sandbox for experimentation and innovation. This prototype is just the beginning, intended as a playground where you can explore new ideas, try different approaches, and learn from our experiences. Whether you’re a seasoned developer or a curious learner, there’s something valuable here for everyone. Let’s dive in and discover what we can achieve together!
 
 ## Table of Contents
 - [TrendPulse](#trendpulse)
   - [Table of Contents](#table-of-contents)
   - [Project Overview](#project-overview)
-  - [Features](#features)
+  - [Project Scope](#project-scope)
+  - [Methodology](#methodology)
+  - [Challenges and Solutions](#challenges-and-solutions)
+  - [Results](#results)
+  - [Learnings](#learnings)
   - [Technologies Used](#technologies-used)
   - [Folder Structure](#folder-structure)
   - [Installation](#installation)
 
 ## Project Overview
-TrendPulse scrapes data from various e-commerce platforms, processes the data to identify trending products, and provides insights through a conversational AI chatbot. The chatbot is designed to interact with users, answer their queries about potential products to dropship, and provide recommendations based on market trends.
+We developed TrendPulse to harness the capabilities of deep neural networks in assisting dropshippers with product research. Users input specific criteria, and the model processes this information to offer five tailored product recommendations. This tool is particularly designed for beginner to intermediate dropshippers.
 
-## Features
-- **Web Scraping:** Automated data collection from e-commerce platforms like Amazon, eBay, and AliExpress.
-- **Trend Analysis:** Analyzes the scraped data to identify trending products.
-- **AI Chatbot:** Conversational AI that interacts with users and provides product recommendations.
-- **User Interface:** A web-based interface for user interactions with the chatbot.
+## Project Scope
+This project aims to develop a prototype recommendation system using deep neural networks to assist dropshippers in product research. The key components of the project include:
+
+- **Dataset**: Utilization of a Kaggle dataset focusing on 12 dropshipping categories.
+- **Neural Network**: A model with five fully connected layers that predicts product ratings and ranks products based on user inputs.
+- **User Interaction**: A simple interface where users input criteria like category and price to receive product recommendations.
+
+## Methodology
+
+### Initial Approach
+We initially attempted to scrape data from online marketplaces but faced significant limitations, leading us to use a Kaggle dataset. This allowed us to focus on developing a neural network prototype.
+
+### Neural Network Development
+The selected Kaggle dataset was cleaned, reduced, and stratified into training, validation, and test sets. The neural network comprises five fully connected layers, with inputs including category, rating, number of ratings, and price. The model predicts product rating classes and ranks the products within these classes.
+
+## Challenges and Solutions
+
+### Challenges
+- **Data Scraping**: The process was time-consuming and restricted by marketplace limitations.
+- **Model Overfitting**: Overfitting occurred due to an excessive number of product classes.
+- **Class Imbalance**: We encountered issues with class imbalance during model training.
+
+### Solutions
+- **Data Utilization**: We adopted a Kaggle dataset to circumvent scraping challenges.
+- **Overfitting Mitigation**: Clustering ratings into three balanced classes was implemented to address overfitting.
+- **Class Balance**: A three-class system was employed to improve model performance and address class imbalance.
+
+## Results
+The developed neural network serves as a prototype capable of predicting and suggesting the top 5 products within a specific class. While this is a simplified model, it provides a solid foundation for future enhancements, potentially expanding into a more sophisticated recommendation system.
+
+## Learnings
+- **Teamwork**: Effective communication and realistic expectation-setting were crucial.
+- **Technical Insights**: Scraping large datasets and understanding APIs require careful planning and project scope adjustment.
+- **Leveraging LLMs**: Large Language Models have immense potential. This project provided foundational insights into using LLMs in practical scenarios, paving the way for future implementations.
 
 ## Technologies Used
-- **Programming Languages:** Python
-- **Frameworks:** Flask (backend), BeautifulSoup/Scrapy (web scraping)
-- **Libraries:** Hugging Face Transformers (LLM), SQLAlchemy (database), Bootstrap (front-end)
-- **Database:** SQLite
-- **Version Control:** Git, GitHub
+- **Programming Languages**: Python
+- **Libraries**:
+  - `pandas`, `numpy`: Data manipulation and analysis.
+  - `sklearn`: Model evaluation, data preprocessing.
+  - `torch`, `torch.nn`, `torch.optim`, `torch.utils.data`: Neural network development and training.
+  - `pickle`: Serialization.
+  - `os`, `time`: System operations and timing functions.
+- **Development Tools**: Jupyter Notebook for experimentation and prototyping.
 
 ## Folder Structure
-- **data/**: Contains all the data files.
-  - **archive/**: For archived or old data files.
-  - **clean/**: For cleaned data files.
-  - **raw/**: For raw data files directly from scraping.
-- **images/**: Store images, such as screenshots, used in the project or README.
-- **notebooks/**: Jupyter notebooks for exploration, analysis, and prototyping.
-- **src/**: Source code for the project.
-  - **app.py**: Main Flask application file.
-  - **chatbot.py**: Logic for the chatbot.
-  - **data_processing.py**: Data processing scripts.
-  - **models/**: Directory for model-related scripts.
-    - **model_utils.py**: Utility functions for models.
-  - **scraping/**: Directory for web scraping scripts.
-    - **scraper.py**: Web scraping logic.
-  - **static/**: Static files for the web app (CSS, JavaScript).
-  - **templates/**: HTML templates for the web app.
-- **tests/**: Unit tests for the project.
-  - **test_app.py**: Tests for the Flask app.
-  - **test_scraper.py**: Tests for the scraper.
-- **.gitignore**: Specifies which files and directories to ignore in version control.
+
+- **data/**: Contains data files used in the project.
+  - **datasets.ipynb**: Notebook for dataset handling.
+  - ...
+
+- **notebooks/**: Jupyter notebooks for analysis and prototyping.
+  - **submission/**: Contains the key project notebook.
+    - **TrendPulse.ipynb**: Main notebook containing the core parts of the project.
+  - ...
+
 - **README.md**: Project documentation.
-- **requirements.txt**: List of Python dependencies.
+- **.gitignore**: Specifies files and directories to ignore in version control.
+- ...
 
 ## Installation
 To set up TrendPulse on your local machine, follow these steps:
