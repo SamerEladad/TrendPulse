@@ -53,7 +53,7 @@ The developed neural network serves as a prototype capable of predicting and sug
 - **Technical Insights**: Scraping large datasets and understanding APIs require careful planning and project scope adjustment.
 - **Leveraging LLMs**: Large Language Models have immense potential. This project provided foundational insights into using LLMs in practical scenarios, paving the way for future implementations.
 
-## Technologies Used
+## Libraries Used
 - **Programming Languages**: Python
 - **Libraries**:
   - `pandas`, `numpy`: Data manipulation and analysis.
@@ -85,3 +85,9 @@ To set up TrendPulse on your local machine, follow these steps:
    ```sh
    git clone https://github.com/SamerEladad/TrendPulse.git
    cd TrendPulse
+
+## Contributors
+
+- **Dilara Bursa**: [LinkedIn](https://www.linkedin.com/in/dilara-bursa-a80b8b22a)
+- **Muhammad Uzair Rana**: [LinkedIn](https://www.linkedin.com/in/muhammad-uzair-rana-9b63b455/)
+- **Samer Eladad**: [LinkedIn](https://www.linkedin.com/in/samereladad/)
